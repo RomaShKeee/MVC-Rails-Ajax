@@ -10,9 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+
 
 @charset "UTF-8";
 @-webkit-keyframes fadeInUp{
@@ -1591,7 +1592,7 @@ em{
 
 .header{
   margin-bottom:55px;
-  background:#4477bd url(/assets/bkg-drips-blue@2x-70d6dbf76911d151744a9dfca0b8fb83.gif) left top repeat;
+  background:#4477bd url(/assets/images/bkg-drips-blue@2x-70d6dbf76911d151744a9dfca0b8fb83.gif) left top repeat;
   background-size:20px 24px;
   border-bottom:1px solid rgba(0,0,0,0.15)
 }
@@ -1727,7 +1728,7 @@ em{
   width:67px;
   height:32px;
   text-indent:-9999px;
-  background:transparent url(/assets/menu-logo@2x-2e05b2318805aa64ccd95cbbb8c7b224.png) left top no-repeat;
+  background:transparent url(/assets/images/menu-logo@2x-2e05b2318805aa64ccd95cbbb8c7b224.png) left top no-repeat;
   background-size:100%
 }
 
@@ -1788,7 +1789,7 @@ ul.menu>li{
 ul.menu>li.separator{
   width:10px;
   height:48px;
-  background:transparent url(/assets/menu-separator-20c20d8eda06afbd3f4c0776617c27ed.png) center center no-repeat
+  background:transparent url(/assets/images/menu-separator-20c20d8eda06afbd3f4c0776617c27ed.png) center center no-repeat
 }
 
 ul.menu>li>a{
@@ -1912,7 +1913,7 @@ ul.dropdown-menu li.separator{
 .footer{
   padding:40px 0 70px;
   background-color:#3b3b3b;
-  background:#3b3b3b url(/assets/bkg-drips-gray@2x-975da038f1cd6a049b607e1ba3d9131c.gif) left top repeat;
+  background:#3b3b3b url(/assets/images/bkg-drips-gray@2x-975da038f1cd6a049b607e1ba3d9131c.gif) left top repeat;
   background-size:20px 24px;
   font-size:14px;
   color:#cfcfcf;
@@ -1953,11 +1954,10 @@ ul.dropdown-menu li.separator{
   margin:0 auto 40px;
   width:63px;
   height:81px;
-  background:transparent url(/assets/footer-drop@2x-9f610e9001807daa2a775a238a132b22.png) center top no-repeat;
+  background:transparent url(/assets/images/footer-drop@2x-9f610e9001807daa2a775a238a132b22.png) center top no-repeat;
   background-size:100%
 }
-.splash { padding-top: 120px; }
-.header { height: 640px; }
+
 .no-contents .header{
   margin-bottom:0
 }
@@ -1996,7 +1996,7 @@ blockquote.testimonial{
   font-family:"proxima-nova",Helvetica,Arial,sans-serif;
   font-weight:600;
   width:284px;
-  background:transparent url(/assets/testimonial-top-468a340c0ae7ce86287563823772ece1.png) left top no-repeat;
+  background:transparent url(/assets/images/testimonial-top-468a340c0ae7ce86287563823772ece1.png) left top no-repeat;
   padding-top:31px;
   text-align:center;
   font-size:16px
@@ -2018,7 +2018,7 @@ blockquote.testimonial .attribution{
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
-  background:transparent url(/assets/testimonial-bottom-7cbaad39aa3edcbbf07ba46367452c36.png) left top no-repeat;
+  background:transparent url(/assets/images/testimonial-bottom-7cbaad39aa3edcbbf07ba46367452c36.png) left top no-repeat;
   height:73px;
   padding:45px 0 0 64px;
   text-align:left;
@@ -2438,7 +2438,7 @@ blockquote.testimonial .attribution .avatar{
   margin:0 auto;
   width:815px;
   height:250px;
-  background:transparent url(/assets/customers-c04ae1e1d7ee8e3651c562baa13f65c9.jpg) center top no-repeat;
+  background:transparent url(/assets/images/customers-c04ae1e1d7ee8e3651c562baa13f65c9.jpg) center top no-repeat;
   background-size:100%
 }
 
@@ -2517,7 +2517,7 @@ blockquote.testimonial .attribution .avatar{
 
 .promise{
   padding:0 50px 50px 133px;
-  background:transparent url(/assets/promise-badge-7a4f0177f20e61068381f5190ed23251.png) 28px 0 no-repeat
+  background:transparent url(/assets/images/promise-badge-7a4f0177f20e61068381f5190ed23251.png) 28px 0 no-repeat
 }
 
 .promise p{
@@ -2591,7 +2591,7 @@ blockquote.testimonial .attribution .avatar{
   margin:50px auto -250px auto;
   width:759px;
   height:629px;
-  background:transparent url(/assets/envelope-08f8638d6dfef1e16376a239ded865a2.png) left top no-repeat;
+  background:transparent url(/assets/images/envelope-08f8638d6dfef1e16376a239ded865a2.png) left top no-repeat;
   text-align:center
 }
 
@@ -2655,7 +2655,7 @@ blockquote.testimonial .attribution .avatar{
   width:167px;
   height:10px;
   text-indent:-9999px;
-  background:transparent url(/assets/fancy-or-43639ffc98c524332d57b9bc049c09ad.png) center 12px no-repeat
+  background:transparent url(/assets/images/fancy-or-43639ffc98c524332d57b9bc049c09ad.png) center 12px no-repeat
 }
 
 .splash .envelope a.tour{
@@ -3158,15 +3158,15 @@ blockquote.testimonial .attribution .avatar{
 }
 
 .tour-journey-selector li.marketing{
-  background-image:url(/assets/tour-journey-marketing@2x-9ab579a9e9e37d8eef1a02e9f94406d8.png)
+  background-image:url(/assets/images/tour-journey-marketing@2x-9ab579a9e9e37d8eef1a02e9f94406d8.png)
 }
 
 .tour-journey-selector li.trial{
-  background-image:url(/assets/tour-journey-trial@2x-3343eb79b1da6b9c51c4eda1d1f75ab9.png)
+  background-image:url(/assets/images/tour-journey-trial@2x-3343eb79b1da6b9c51c4eda1d1f75ab9.png)
 }
 
 .tour-journey-selector li.customer{
-  background-image:url(/assets/tour-journey-customer@2x-80e2673c2d106d15f33b44ea2a92ddac.png)
+  background-image:url(/assets/images/tour-journey-customer@2x-80e2673c2d106d15f33b44ea2a92ddac.png)
 }
 
 .tour-journey-selector li a{
@@ -3209,7 +3209,7 @@ blockquote.testimonial .attribution .avatar{
   border-radius:12px;
   box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
   width:100%;
-  background:#f2f2f2 url(/assets/bkg-light-linen-d4646faa95c85be6e6056e14b38d6a81.png) left top repeat
+  background:#f2f2f2 url(/assets/images/bkg-light-linen-d4646faa95c85be6e6056e14b38d6a81.png) left top repeat
 }
 
 .tour-carousel .slides-container .carousel-inner>.item{
@@ -3247,23 +3247,23 @@ blockquote.testimonial .attribution .avatar{
 }
 
 .tour-carousel .slides-container .carousel-inner .item.first h3:before{
-  background-image:url(/assets/tour-number-1-d47de7b9aa3eacd36cc821cce9d273ba.png)
+  background-image:url(/assets/images/tour-number-1-d47de7b9aa3eacd36cc821cce9d273ba.png)
 }
 
 .tour-carousel .slides-container .carousel-inner .item.second h3:before{
-  background-image:url(/assets/tour-number-2-d995063f18541744decffdac5fbec33e.png)
+  background-image:url(/assets/images/tour-number-2-d995063f18541744decffdac5fbec33e.png)
 }
 
 .tour-carousel .slides-container .carousel-inner .item.third h3:before{
-  background-image:url(/assets/tour-number-3-53d6506115bed19180bf2d6b97fc27f4.png)
+  background-image:url(/assets/images/tour-number-3-53d6506115bed19180bf2d6b97fc27f4.png)
 }
 
 .tour-carousel .slides-container .carousel-inner .item.fourth h3:before{
-  background-image:url(/assets/tour-number-4-e684c7b8a458fc52b5fd6a34a4f64769.png)
+  background-image:url(/assets/images/tour-number-4-e684c7b8a458fc52b5fd6a34a4f64769.png)
 }
 
 .tour-carousel .slides-container .carousel-inner .item.fifth h3:before{
-  background-image:url(/assets/tour-number-5-d8d1cbbd9823242a6ad4438e3c948906.png)
+  background-image:url(/assets/images/tour-number-5-d8d1cbbd9823242a6ad4438e3c948906.png)
 }
 
 .tour-carousel .slides-container .carousel-inner .item h4{
@@ -3370,7 +3370,7 @@ blockquote.testimonial .attribution .avatar{
   height:160px;
   left:-1px;
   bottom:0;
-  background:transparent url(/assets/tour-tab-33985dfdd9763ab4967247b213f3d7af.png) left top no-repeat;
+  background:transparent url(/assets/images/tour-tab-33985dfdd9763ab4967247b213f3d7af.png) left top no-repeat;
   color:#fff;
   z-index:1000
 }
@@ -3963,7 +3963,7 @@ blockquote.testimonial .attribution .avatar{
   width:34px;
   height:27px;
   vertical-align:middle;
-  background:transparent url(/assets/pricing-check-0f3056650e95efddac734284b697fbeb.png) 0 0 no-repeat
+  background:transparent url(/assets/images/pricing-check-0f3056650e95efddac734284b697fbeb.png) 0 0 no-repeat
 }
 
 .pricing-grid ul.plan{
@@ -4763,7 +4763,7 @@ ol.auth{
 .conversionworth #content{
   max-width:980px;
   margin:0 auto;
-  background-image:url(/back-button.png)
+  background-image:url(/images/back-button.png)
 }
 
 .conversionworth #intro p{
@@ -4996,7 +4996,7 @@ ol.auth{
   font-size:.7em;
   font-weight:100;
   color:#747474;
-  background:transparent url(/assets/conversionworth/arrow-of-urgency.gif) 82% 2px no-repeat
+  background:transparent url(/assets/images/conversionworth/arrow-of-urgency.gif) 82% 2px no-repeat
 }
 
 .conversionworth #total-sales-calculator{

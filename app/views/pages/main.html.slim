@@ -1,2 +1,24 @@
-h1 Pages#main
-p Find me in app/views/pages/main.html.slim
+.header
+  .splash
+    .container
+      /! <h1>Welcome Back!</h1
+      .signin-container
+        .heading
+          h2 Input website URL
+        form accept-charset="UTF-8" action="/signin" method="post"
+          div style="margin:0;padding:0;display:inline"
+          dl.form.full
+            dt
+              label for="email"  Website URL:
+            dd
+              input#url-box name="url" placeholder="example.com" type="text" /
+          .form-controls
+            input.button.orange name="commit" type="submit" value=("Enter the URL") /
+        .call-to-signup
+.contents
+.footer
+  .container
+    ul.links
+    .drop
+    .copyright
+      | © 2015
