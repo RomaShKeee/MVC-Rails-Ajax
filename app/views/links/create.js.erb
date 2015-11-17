@@ -1,2 +1,3 @@
 $("#url-box").val("");
-$("#content").append("<%=j render @link %>");
+$('dt:contains(\"<%= @link.url %>\")').empty();
+$("#content").prepend("<%=j render @link %>");
