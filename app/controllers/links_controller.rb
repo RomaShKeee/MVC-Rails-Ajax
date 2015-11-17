@@ -10,11 +10,11 @@ class LinksController < ApplicationController
     @link = Link.new(link_params)
     respond_to do |format|
       if @link.save
-        format.html { redirect_to store_url }
+        format.html { redirect_to root_path }
         format.js { @link }
         format.json { render :show, status: :created, location: @link }
       else
-        format.html { render :new }
+        format.html { render root_path }
         format.json { render json: @link.errors, status: :unprocessable_entity }
       end
     end
@@ -28,8 +28,10 @@ class LinksController < ApplicationController
     end
   end
 
-  def link_params
-      params.require(:link).permit(:url)
-  end
+  private
+
+    def link_params
+        params.require(:link).permit(:url)
+    end
 
 end

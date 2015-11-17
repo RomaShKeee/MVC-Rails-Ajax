@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  if ($.support.localStorage) {
+    $(window.applicationCache).bind("error", function() {
+      console.log("There was an error when loading the cache manifest.");
+    });
+  };
+});

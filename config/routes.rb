@@ -4,9 +4,19 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :links
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
+  offline = Rack::Offline.configure :cache_interval => 120 do
+    cache ActionController::Base.helpers.asset_path("application.css")
+    cache ActionController::Base.helpers.asset_path("application.js")
+    cache ActionController::Base.helpers.asset_path("jquery.js")
+    cache ActionController::Base.helpers.asset_path("jquery.tmpl.min.js")
+    # cache other assets
+    network "/"
+  end
+  get "/manifest.appcache" => offline
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
