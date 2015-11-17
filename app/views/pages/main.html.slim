@@ -5,15 +5,7 @@
       .signin-container
         .heading
           h2 Input website URL
-        form accept-charset="UTF-8" action="/signin" method="post"
-          div style="margin:0;padding:0;display:inline"
-          dl.form.full
-            dt
-              label for="email"  Website URL:
-            dd
-              input#url-box name="url" placeholder="example.com" type="text" /
-          .form-controls
-            input.button.orange name="commit" type="submit" value=("Enter the URL") /
+        = render "shared/form"
         .call-to-signup
 .contents
 .footer

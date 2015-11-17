@@ -1,0 +1,11 @@
+= form_for @link, remote: true do |f|
+  dl.form.full
+    dt
+      = f.label "Website URL:"
+    dd
+      = f.text_field :url, id: "url-box", placeholder: "example.com"
+    .form-controls
+      = f.submit "Enter the URL", class: "button orange"
+  dl.form.full
+    br
+    #content
