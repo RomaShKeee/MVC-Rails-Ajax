@@ -85,3 +85,5 @@ test:
 production:
   <<: *default
   database: mvc-ajax-test_production
+  username: mvc-ajax-test
+  password: <%= ENV['MVC-AJAX-TEST_DATABASE_PASSWORD'] %>
