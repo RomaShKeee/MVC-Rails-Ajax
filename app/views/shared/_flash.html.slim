@@ -1,4 +1,5 @@
-- flash.discard.each do |key, value|
-  div class=("text-center alert alert-success alert-#{key} fade in")
-    = value
-    button.close type="button" &times;
+div class=("text-center alert alert-success fade in") style=("display:none")
+  button.close type="button" data-dismiss="alert" &times;
+  -unless flash.empty?
+    == render(partial: 'shared/flash_msg', locals: { flash: flash })
+

@@ -3,6 +3,7 @@ $("#url-box").val("");
   $('dt:contains(\"<%= @link.url %>\")').remove();
   $("#content").prepend("<%= escape_javascript(render @link) %>");
 <% else %>
-  var flash = "<%= escape_javascript render(partial: 'shared/flash', locals: { flash: flash }) %>";
-  $('body').prepend(flash);
+  var flash = "<%= escape_javascript render(partial: 'shared/flash_msg', locals: { flash: flash }) %>";
+  $(".msg-flash").remove();
+  $('.alert').append(flash).show();
 <% end %>
