@@ -1,3 +1,8 @@
 $("#url-box").val("");
-$('dt:contains(\"<%= @link.url %>\")').empty();
-$("#content").prepend("<%=j render @link %>");
+<% if @link.persisted? %>
+  $('dt:contains(\"<%= @link.url %>\")').remove();
+  $("#content").prepend("<%= escape_javascript(render @link) %>");
+<% else %>
+  var flash = "<%= escape_javascript render(partial: 'shared/flash', locals: { flash: flash }) %>";
+  $('body').prepend(flash);
+<% end %>

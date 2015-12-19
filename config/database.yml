@@ -19,11 +19,11 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
   host: localhost
   username: postgres
   password: postgres
   port: 5432
+  pool: 5
 
 development:
   <<: *default
@@ -83,7 +83,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: mvc-ajax-test_production
-  username: mvc-ajax-test
-  password: <%= ENV['MVC-AJAX-TEST_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

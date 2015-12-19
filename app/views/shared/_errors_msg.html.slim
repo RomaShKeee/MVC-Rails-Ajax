@@ -1,0 +1,9 @@
+- if object.errors.any?
+  #error_explanation
+    .alert.alert-danger
+      button.close data-dismiss="alert" type="button" &times;
+      p = "#{pluralize(object.errors.count, "error")} prohibited this category from being saved:"
+
+      ul
+        - object.errors.full_messages.each do |message|
+          li = message

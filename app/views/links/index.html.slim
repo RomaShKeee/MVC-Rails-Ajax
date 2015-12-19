@@ -1,0 +1,10 @@
+table
+  - @links.each do |link|
+    tr
+      td.list_header
+        dl
+          dt= link.url
+      td.list_actions
+        = link_to "Show", link
+        br/
+        = link_to "X", link, :confirm => "Are you sure?", :method => :delete
