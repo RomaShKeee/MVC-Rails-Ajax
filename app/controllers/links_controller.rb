@@ -2,6 +2,10 @@ class LinksController < ApplicationController
   before_action :set_link_item, only: [:show, :destroy]
   def index
     @links = Link.all.order('created_at DESC')
+    respond_to do |format|
+      format.html { @links }
+      format.json { @links }
+    end
   end
 
   def new
@@ -14,6 +18,9 @@ class LinksController < ApplicationController
 
   def create
     @link = Link.new(link_params)
+    url = @link.parse_url(@link.url)
+    item = Link.find_by_url(url)
+    item.destroy if item
     unless @link.save
       flash.now[:notice] = "Your link couldn't be saved: #{ @link.errors.full_messages.join(', ') }."
     end

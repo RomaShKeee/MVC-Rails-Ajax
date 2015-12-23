@@ -1,1 +1,0 @@
-(function(){$(function(){var e,t,n,o;for(o=$("form"),t=0,n=o.length;n>t;t++)e=o[t],("post"===e.method||"delete"===e.method)&&$(e).prepend("<input type='hidden' name='authenticity_token' value='"+token+"'>");return $(".close").click(function(){return $(".alert").remove()})})}).call(this);

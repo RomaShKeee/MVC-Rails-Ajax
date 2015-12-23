@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/main'
+  get 'status' => 'pages#status', as: :status
   root 'pages#main'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,13 +13,16 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  offline = Rack::Offline.configure :cache_interval => 120 do
-    cache ActionController::Base.helpers.asset_path("application.css")
-    cache ActionController::Base.helpers.asset_path("application.js")
-    cache ActionController::Base.helpers.asset_path("jquery.js")
-    cache ActionController::Base.helpers.asset_path("jquery.tmpl.min.js")
-    # cache other assets
-    network "/"
+  offline = Rack::Offline.configure :cache_interval => 1200 do
+    cache "404.html"
+    cache "500.html"
+    action_view = ActionView::Base.new
+    action_view.stylesheet_link_tag("application").split("\n").collect{|a|          cache a.match(/href=\"(.*)\"/)[1] }
+    action_view.javascript_include_tag("application").split("\n").collect{|a|       cache a.match(/src=\"(.*)\"/)[1] }
+
+    network
+
+    fallback
   end
   get "/manifest.appcache" => offline
   # Example of regular route:

@@ -5,5 +5,5 @@ $("#url-box").val("");
 <% else %>
   var flash = "<%= escape_javascript render(partial: 'shared/flash_msg', locals: { flash: flash }) %>";
   $(".msg-flash").remove();
-  $('.alert').append(flash).show();
+  $('.alert').append(flash);
 <% end %>

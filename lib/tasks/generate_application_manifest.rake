@@ -7,15 +7,13 @@ task :html5_manifest => :environment do
   File.open("public/manifest.appcache", "w") do |f|
     f.write("CACHE MANIFEST\n")
     f.write("# Version #{Time.now.to_i}\n\n")
-    f.write("CACHE:\n")
-    assets = Dir.glob(File.join(Rails.root, 'public/assets/**/*'))
-    assets.each do |asset|
-      if File.extname(asset) != '.gz' && File.extname(asset) != '' && File.extname(asset) != '.json'
-        filename_path = /#{Rails.root.to_s}\/public\/(assets\/.*)/.match(File.absolute_path(asset))[1].to_s
-        # f.write("assets/#{File.basename(asset)}\n")
-        f.write(filename_path.concat("\n"))
-      end
-    end
+
+
+    action_view = ActionView::Base.new
+    action_view.stylesheet_link_tag("application").split("\n").collect{|a|       f.puts  a.match(/href=\"(.*)\"/)[1].to_s }
+    action_view.javascript_include_tag("application").split("\n").collect{|a|     f.puts a.match(/src=\"(.*)\"/)[1].to_s }
+
+
     f.write("\nNETWORK:\n")
     f.write("*\n")
     f.write("http://*\n")
