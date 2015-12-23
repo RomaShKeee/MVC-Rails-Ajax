@@ -4,11 +4,8 @@ Rails.application.routes.draw do
   root 'pages#main'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  resources :links do
-    collection do
-      delete 'clear_all'
-    end
-  end
+  delete "/clear_all" => "links#clear_all"
+  resources :links
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

@@ -1,17 +1,18 @@
-= form_for @link, remote: true, authenticity_token: true do |f|
-  == render 'shared/errors_msg', object: f.object
-  == render 'shared/script'
-  dl.form.full
-    dt
-      = f.label "Website URL:"
-    dd
-      = f.text_field :url, id: "url-box", placeholder: "example.com"
-    .form-controls
-      = f.submit "Enter the URL", class: "button orange"
 
   dl.form.full
-    br
-    #content
-      == render @links
-  dl
-    = link_to "Delete All", clear_all_links_path, :method => :delete, id: "clear_all", onclick: "noFollow()"
+    = form_for @link, remote: true, authenticity_token: true do |f|
+      == render 'shared/errors_msg', object: f.object
+      == render 'shared/script'
+      dt
+        = f.label "Website URL:"
+      dd
+        = f.text_field :url, id: "url-box", placeholder: "example.com"
+      .form-controls
+        = f.submit "Enter the URL", class: "button orange"
+  .box-content
+    dl.form.full
+      br
+      #content
+        == render @links
+    dl
+      button#clear_all.button.red Clear All

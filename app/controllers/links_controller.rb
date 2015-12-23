@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+  skip_before_filter :verify_authenticity_token, only: [:create, :destroy, :clear_all]
   before_action :set_link_item, only: [:show, :destroy]
   def index
     @links = Link.all.order('created_at DESC')

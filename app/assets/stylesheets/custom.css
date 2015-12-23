@@ -530,6 +530,9 @@ span.field-notes{
 span.required{
   color:red
 }
+.box-content {
+  padding: 30px 40px 25px;
+}
 
 form span.error{
   display:inline-block;
